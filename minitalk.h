@@ -13,17 +13,17 @@
 #ifndef MINITALK_H
 # define MINITALK_H
 
-# define INT_MAX 2147483647
 
 # include "Printf/ft_printf.h"
 # include <signal.h>	
 
 typedef struct s_vars
 {
-	int	i;
+	long int	i;
 	int	pid;
 	int	len;
-	char	*str;
+	int	max_len;
+	unsigned char	*str;
 }			t_vars;
 
 #endif
