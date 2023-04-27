@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbricot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/27 08:04:08 by gbricot           #+#    #+#             */
-/*   Updated: 2023/04/27 12:03:51 by gbricot          ###   ########.fr       */
+/*   Created: 2023/04/25 15:21:19 by gbricot           #+#    #+#             */
+/*   Updated: 2023/04/26 19:25:00 by gbricot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,53 +56,62 @@ void	ft_send_len(int len, int pid)
 	while (i <= 2147483648)
 	{
 		if (len & i)
+		{
 			kill(pid, SIGUSR1);
+			ft_printf("1");
+		}
 		else
+		{
 			kill(pid, SIGUSR2);
+			ft_printf("0");
+		}
 		i *= 2;
-		usleep(100);
+		usleep(1000);
 	}
 }
 
-void	ft_send_str(const char *str, int pid)
+void	ft_send_octet(unsigned char octet, int pid)
 {
 	int	i;
-	int	oct;
 
 	i = 1;
-	oct = 0;
-	while (str[oct])
+	while (i <= 128)
 	{
-		if (i <= 128)
+		if (octet & i)
 		{
-			if (str[oct] & i)
-				kill(pid, SIGUSR1);
-			else
-				kill(pid, SIGUSR2);
-			i *= 2;
+			kill(pid, SIGUSR1);
+			ft_printf("1"); //debug
 		}
 		else
 		{
-			i = 1;
-			oct++;
+			kill(pid, SIGUSR2);
+			ft_printf("0"); //debug
 		}
-		usleep(100);
+		i *= 2;
+		usleep(1000);
 	}
 }
 
 int	main(int argc, char **argv)
 {
-	int	len;
 	int	pid;
+	int	len;
+	int	i;
 
 	if (argc != 3)
-		exit (ft_printf("Please enter a PID and your message\n"));
+		return (ft_printf("Please enter a PID and your message\n"));
 	pid = ft_atoi(argv[1]);
 	len = ft_strlen(argv[2]);
-	kill(pid, SIGUSR1);
-	usleep(100);
+	ft_printf("len :%d\n", len);
 	ft_send_len(len, pid);
-	ft_send_str(argv[2], pid);
 	kill(pid, SIGUSR1);
+	usleep(1000);
+	ft_printf("\n");
+	i = 0;
+	while (argv[2][i])
+	{
+		ft_send_octet(argv[2][i], pid);
+		i++;
+	}
 	return (0);
 }
