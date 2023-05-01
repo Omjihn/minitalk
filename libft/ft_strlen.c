@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minitalk_bonus.h"
+#include "../minitalk.h"
 
 size_t	ft_strlen(const char *s)
 {
