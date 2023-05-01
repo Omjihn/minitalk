@@ -24,13 +24,13 @@ void	ft_send_len(int pid)
 	if (g_vars.i > 2147483648)
 	{
 		g_vars.len_is_send = 1;
-		G_vars.i = 1;
+		g_vars.i = 1;
 	}
 }
 
 void	ft_send_str(int pid)
 {
-	if (G_vars.i > 128)
+	if (g_vars.i > 128)
 	{
 		g_vars.i = 1;
 		g_vars.oct++;

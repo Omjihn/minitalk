@@ -29,7 +29,7 @@ void	ft_bin_len(t_vars_s *vars, int sig)
 	}
 	if (vars->i > 2147483648)
 	{
-		vars->str = (char *) calloc (sizeof(char), vars->max_len + 1);
+		vars->str = (char *) ft_calloc (sizeof(char), vars->max_len + 1);
 		vars->i = 1;
 	}
 }
@@ -52,7 +52,7 @@ void	ft_receive(int sig, siginfo_t *info, void *context)
 
 	if (!vars)
 	{
-		vars = (t_vars_s *) calloc (sizeof(t_vars_s), 1);
+		vars = (t_vars_s *) ft_calloc (sizeof(t_vars_s), 1);
 		vars->i = 1;
 	}
 	else if (!vars->str)
