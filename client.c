@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 		exit (ft_printf("Please enter a PID and your message\n"));
 	g_vars.pid = ft_atoi(argv[1]);
 	g_vars.len = ft_strlen(argv[2]);
-	if (vars.len == 0)
+	if (g_vars.len == 0)
 		exit (ft_printf("Nothing to send\n"));
 	g_vars.i = 1;
 	g_vars.oct = 0;

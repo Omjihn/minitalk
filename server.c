@@ -50,6 +50,8 @@ void	ft_receive(int sig, siginfo_t *info, void *context)
 {
 	static t_vars_s	*vars;
 
+	if (context)
+		context = "Tu sers a rien merci";
 	if (!vars)
 	{
 		vars = (t_vars_s *) ft_calloc (sizeof(t_vars_s), 1);
