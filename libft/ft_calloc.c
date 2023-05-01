@@ -29,7 +29,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (ptr);
 	i = 0;
 	tmp_ptr = ptr;
-	while (tmp_ptr[i])
+	while (i <= tmp_res)
 	{
 		tmp_ptr[i] = '\0';
 		i++;
