@@ -6,7 +6,7 @@
 #    By: gbricot <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/02 11:06:21 by gbricot           #+#    #+#              #
-#    Updated: 2023/05/02 11:24:29 by gbricot          ###   ########.fr        #
+#    Updated: 2023/05/02 11:50:54 by gbricot          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,14 +17,12 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC_C =	sources/client.c \
-	libft/ft_calloc.c \
 	libft/ft_atoi.c \
 	libft/ft_strlen.c 
 
 SRC_S = sources/server.c \
         libft/ft_calloc.c \
-        libft/ft_atoi.c \
-        libft/ft_strlen.c
+	libft/ft_memset.c
 
 OBJ_C = $(SRC_C:.c=.o)
 
