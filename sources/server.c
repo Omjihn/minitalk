@@ -6,7 +6,7 @@
 /*   By: gbricot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 08:04:00 by gbricot           #+#    #+#             */
-/*   Updated: 2023/05/01 19:40:06 by gbricot          ###   ########.fr       */
+/*   Updated: 2023/05/02 11:01:37 by gbricot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,8 @@ int	main(void)
 	struct sigaction	signal;
 
 	signal.sa_sigaction = ft_receive;
-//	sigemptyset(&signal.sa_mask);
 	signal.sa_flags = SA_SIGINFO;
-	ft_printf("Server PID :%d\n", getpid());
+	ft_printf("Server PID : %d\n", getpid());
 	sigaction(SIGUSR1, &signal, NULL);
 	sigaction(SIGUSR2, &signal, NULL);
 	while (1)

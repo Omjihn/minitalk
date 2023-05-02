@@ -6,11 +6,11 @@
 /*   By: gbricot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 09:20:22 by gbricot           #+#    #+#             */
-/*   Updated: 2023/02/22 14:43:32 by gbricot          ###   ########.fr       */
+/*   Updated: 2023/05/02 11:04:07 by gbricot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minitalk.h"
+#include "../sources/minitalk.h"
 
 int	ft_atoi(const char *nptr)
 {

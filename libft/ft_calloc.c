@@ -6,11 +6,11 @@
 /*   By: gbricot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 18:09:32 by gbricot           #+#    #+#             */
-/*   Updated: 2023/05/01 18:10:53 by gbricot          ###   ########.fr       */
+/*   Updated: 2023/05/02 11:04:19 by gbricot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minitalk.h"
+#include "../sources/minitalk.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

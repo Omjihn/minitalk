@@ -6,11 +6,11 @@
 /*   By: gbricot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 14:01:44 by gbricot           #+#    #+#             */
-/*   Updated: 2023/02/14 14:25:13 by gbricot          ###   ########.fr       */
+/*   Updated: 2023/05/02 11:05:08 by gbricot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minitalk.h"
+#include "../sources/minitalk.h"
 
 size_t	ft_strlen(const char *s)
 {

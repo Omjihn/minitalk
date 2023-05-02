@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk_bonus.h                                   :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbricot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 16:23:59 by gbricot           #+#    #+#             */
-/*   Updated: 2023/05/01 15:29:32 by gbricot          ###   ########.fr       */
+/*   Updated: 2023/05/02 11:18:32 by gbricot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
 
-# include "Printf/ft_printf.h"
+# include "../Printf/ft_printf.h"
 # include <string.h>
 # include <signal.h>
 
